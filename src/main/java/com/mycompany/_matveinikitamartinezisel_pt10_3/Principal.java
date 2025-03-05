@@ -5,8 +5,8 @@
 package com.mycompany._matveinikitamartinezisel_pt10_3;
 
 /**
- *
- * @author nikit
+ * 
+ * @author nikita i isel
  */
 public class Principal {
 
