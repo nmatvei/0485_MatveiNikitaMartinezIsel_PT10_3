@@ -2,7 +2,6 @@ package com.mycompany._matveinikitamartinezisel_pt10_3;
 
 import Interficies.Estadistiques;
 import java.util.Random;
-import java.util.Scanner;
 
 /**
  * Classe ArrayReals que implementa la interfície Estadistiques 
@@ -13,8 +12,7 @@ public class ArrayReals implements Estadistiques {
     /*Declaració d'atriubuts i variables*/
     private double[] elementsReals;
     private final static int LONGITUT_PER_DEFECTE = 5;
-    private final static int NOMBRE_MAXIM = 100;
-    private final static int NOMBRE_MINIM = 0;
+    private final static int NOMBRE_MAXIM = 100 , NOMBRE_MINIM = 0;
 
     /**
      * Constructor per defecte que truca el constructor parametritzat amb una
@@ -30,17 +28,11 @@ public class ArrayReals implements Estadistiques {
      * @param longitut 
      */
     public ArrayReals(int longitut) {
-        if (longitut < 0){
-            Scanner sc = new Scanner(System.in);
-            boolean demanarLongitut = false;
-            
-            while(!demanarLongitut){
-                System.out.println("ERROR: Has introduït una longitut incorrecte");
-                System.out.println("Introdueix una nova longitut: ");
-                if(sc.hasNextInt() && sc.nextInt() > 0){
-                    longitut = sc.nextInt();
-                }
-            }
+        /*Comprovem que la longitut no sigui igual o menor a 0*/
+        if (longitut <= 0){
+            System.out.println("ERROR: S'ha introduït una longitut per l'array incorrecte");
+            System.out.println("Es donarà el valor per defecte (5)");
+            longitut = LONGITUT_PER_DEFECTE;
         }
         this.elementsReals = new double[longitut];
         this.assignar();
@@ -104,5 +96,21 @@ public class ArrayReals implements Estadistiques {
             suma = suma + elementsReals[i];
         }
         return suma;
+    }
+    
+    /**
+     * Mètode imprimir per mostrar els elements que hi ha dins de l'array
+     */
+    public void imprimir(){
+        String contingutElementsReals = "";
+        for (int i = 0; i < elementsReals.length; i++) {
+            if (i == (elementsReals.length - 1)){
+                contingutElementsReals = contingutElementsReals + elementsReals[i];
+            }
+            else{
+                contingutElementsReals = contingutElementsReals + elementsReals[i] + ",";
+            }
+        }
+        System.out.println(contingutElementsReals);
     }
 }
