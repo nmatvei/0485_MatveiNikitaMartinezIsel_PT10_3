@@ -6,7 +6,7 @@ import java.util.Random;
 /**
  * Classe ArrayReals que implementa la interfície Estadistiques 
  * 
- * @author nikita i isel
+ * @author nikita
  */
 public class ArrayReals implements Estadistiques {
     /*Declaració d'atriubuts i variables*/

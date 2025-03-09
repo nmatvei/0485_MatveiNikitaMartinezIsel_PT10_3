@@ -2,7 +2,7 @@ package com.mycompany._matveinikitamartinezisel_pt10_3;
 
 /**
  * 
- * @author nikita i isel
+ * @author nikita
  */
 public class Principal {
 
@@ -23,7 +23,6 @@ public class Principal {
         System.out.println("\n\t\tEl valor minim de l'array: " + array2.minim());
         System.out.println("\n\t\tEl valor màxim de l'array: " + array2.maxim());
         System.out.println("\n\t\tLa suma de tots els valors de l'array: " + array2.suma());
-        
         
     }
 }

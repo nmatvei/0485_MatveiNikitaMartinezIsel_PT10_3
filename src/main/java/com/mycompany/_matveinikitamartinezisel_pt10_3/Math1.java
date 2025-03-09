@@ -5,7 +5,7 @@ import Interficies.Extrems;
 /**
  * 
  * 
- * @author nikit
+ * @author nikita
  */
 public class Math1 implements Extrems{
     /*Declaració de variables i atributs*/

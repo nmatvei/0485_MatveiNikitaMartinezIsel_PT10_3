@@ -3,7 +3,7 @@ package Interficies;
 /**
  * Interfície Extrems
  * 
- * @author nikita i isel
+ * @author nikita
  */
 public interface Extrems {
     /*Declaració dels mètodes que implementaran les classes que implementin

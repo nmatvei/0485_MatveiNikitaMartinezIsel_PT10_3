@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mycompany</groupId>
-    <artifactId>0485_MatveiNikitaMartinezIsel_PT10_3</artifactId>
+    <artifactId>0485_MatveiNikita_PT10_3</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
@@ -10,4 +10,5 @@
         <maven.compiler.release>23</maven.compiler.release>
         <exec.mainClass>com.mycompany._matveinikitamartinezisel_pt10_3.Principal</exec.mainClass>
     </properties>
+    <name>0485_MatveiNikita_PT10_3</name>
 </project>
