@@ -27,19 +27,21 @@ public class Principal {
         System.out.println("\n\t\tEl valor màxim de l'array: " + array2.maxim());
         System.out.println("\n\t\tLa suma de tots els valors de l'array: " + array2.suma());
         System.out.println("Math1 (que implementa la interfície Extrems)");
-        System.out.println("\n\tPer realitzar les proves, declararem:");
-        System.out.println("\n\t\t- Un objecte Math1 guardat en una variable");
+        System.out.println("\nPer realitzar les proves, declararem:");
+        System.out.println("\n\t- Un objecte Math1 guardat en una variable");
         Math1 mates = new Math1();
-        System.out.println("\n\t\t- Una taula amb nombres reals de la cual podem extreure amb Math1:");
+        System.out.println("\n\t- Una taula amb nombres reals de la cual podem extreure amb Math1:");
         double[] llistaDouble = new double[7];
         llistaDouble = omplirArraysDouble(llistaDouble);
-        System.out.println("\n\t\t\tEl seu valor mínim: " + mates.min(llistaDouble));
-        System.out.println("\n\t\t\tEl seu valor màxim: " + mates.max(llistaDouble));
-        System.out.println("\n\t\t- Una taula amb nombres enters de la cual podem extreure amb Math1:");
+        System.out.println("\n\t\tEls seus elements: " + mates.imprimirArrayDouble(llistaDouble));
+        System.out.println("\n\t\tEl seu valor mínim: " + mates.min(llistaDouble));
+        System.out.println("\n\t\tEl seu valor màxim: " + mates.max(llistaDouble));
+        System.out.println("\n\t- Una taula amb nombres enters de la cual podem extreure amb Math1:");
         int[] llistaInt = new int[7];
         llistaInt = omplirArraysInt(llistaInt);
-        System.out.println("\n\t\t\tEl seu valor mínim: " + mates.min(llistaInt));
-        System.out.println("\n\t\t\tEl seu valor màxim: " + mates.max(llistaInt));
+        System.out.println("\n\t\tEls seus elements: " + mates.imprimirArrayInt(llistaInt));
+        System.out.println("\n\t\tEl seu valor mínim: " + mates.min(llistaInt));
+        System.out.println("\n\t\tEl seu valor màxim: " + mates.max(llistaInt));
     }
     
     /**
@@ -56,10 +58,8 @@ public class Principal {
         
         /*Donem valors a cada posició del array*/
         for (int i = 0; i < elementsEnters.length; i++){
-            elementsEnters[i] = generarNombreAleatori.nextInt() * VALOR_MAXIM;
-            /*Al multiplicar el VALOR_MAXIM (50) al Random, fem que el valor
-            d'aquest també estigui inclos (en el nostre cas, tots els valors
-            entre 0 i 100 amb els seus decimas i ambdos inclosos*/
+            elementsEnters[i] = generarNombreAleatori.nextInt(VALOR_MAXIM + 1);
+            /*Fent VALOR_MAXIM(50)+1 determinem que els valors siguin entre 0 i 50*/
         }
         /*Retornem la llista*/
         return elementsEnters;

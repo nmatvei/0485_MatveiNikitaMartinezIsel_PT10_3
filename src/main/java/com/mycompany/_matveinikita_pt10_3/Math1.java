@@ -9,7 +9,7 @@ import Interficies.Extrems;
  */
 public final class Math1 implements Extrems{
     /**
-     * Constructor buit, ja que, volem instanciar l'objecte però, com no tenim
+     * Constructor buit, ja que, volem instanciar l'objecte Math1 però, com no tenim
      * cap atribut, no donem cap valor a res i només volem utilitzar l'objecte 
      * per fer ús dels seus mètodes.
      */
@@ -77,7 +77,7 @@ public final class Math1 implements Extrems{
         /*Estructura FOR per pasar per tot la taula i determinar el mínim valor
         d'aquesta*/
         for (int i = 0; i < a.length; i++) {
-            if (a[i] > minim){
+            if (a[i] < minim){
                 minim = a[i];            }
         }
         
@@ -107,5 +107,47 @@ public final class Math1 implements Extrems{
         
         /*Retornem el valor màxim*/
         return maxim;
+    }
+    
+    /**
+     * Mètode imprimirArrayInt que rep com a paràmetre una taula de int i
+     * mostra per pantalla els nombres que hi ha dins
+     * @param elementsInt 
+     */
+    public String imprimirArrayInt(int[] elementsInt){
+        String contingutElementsEnters = "";
+        for (int i = 0; i < elementsInt.length; i++) {
+            if (i == (elementsInt.length - 1)){
+                /*Donem un format de sortida al últim nombre*/
+                contingutElementsEnters = contingutElementsEnters + elementsInt[i];
+            }
+            else{
+                /*Canviem el fomat per quan no és l'últim nombre*/
+                contingutElementsEnters = contingutElementsEnters + elementsInt[i] + ",";
+            }
+        }
+        /*Mostrem per pantalla el contingut de l'array*/
+        return contingutElementsEnters;
+    }
+    
+    /**
+     * Mètode imprimirArrayDouble que rep com a paràmetre una taula de double i
+     * mostra per pantalla els nombres que hi ha dins.
+     * @param elementsReals 
+     */
+    public String imprimirArrayDouble(double[] elementsReals){
+        String contingutElementsReals = "";
+        for (int i = 0; i < elementsReals.length; i++) {
+            if (i == (elementsReals.length - 1)){
+                /*Donem un format de sortida al últim nombre*/
+                contingutElementsReals = contingutElementsReals + elementsReals[i];
+            }
+            else{
+                /*Canviem el fomat per quan no és l'últim nombre*/
+                contingutElementsReals = contingutElementsReals + elementsReals[i] + ",";
+            }
+        }
+        /*Retornem el contingut de l'array*/
+        return contingutElementsReals;
     }
 }

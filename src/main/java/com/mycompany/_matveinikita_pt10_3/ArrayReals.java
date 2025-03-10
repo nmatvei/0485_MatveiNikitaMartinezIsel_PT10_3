@@ -11,8 +11,8 @@ import java.util.Random;
 public class ArrayReals implements Estadistiques {
     /*Declaració d'atriubuts i variables*/
     private double[] elementsReals;
-    private final static int LONGITUT_PER_DEFECTE = 5;
-    private final static int NOMBRE_MAXIM = 100 , NOMBRE_MINIM = 0;
+    private final static int NOMBRE_MAXIM = 100 , NOMBRE_MINIM = 0, 
+            LONGITUT_PER_DEFECTE = 5;
 
     /**
      * Constructor per defecte que truca el constructor parametritzat amb una
@@ -61,12 +61,17 @@ public class ArrayReals implements Estadistiques {
      */
     @Override
     public double minim(){
+        /*Declaració de variables*/
         double minim = NOMBRE_MAXIM;
+        
+        /*Recorrem l'array per determinar el nombre mínim*/
         for (int i = 0; i < elementsReals.length; i++) {
             if (elementsReals[i] < minim){
                 minim = elementsReals[i];
             }
         }
+        
+        /*Retornem el mínim*/
         return minim;
     }
     
@@ -76,12 +81,17 @@ public class ArrayReals implements Estadistiques {
      */
     @Override
     public double maxim(){
+        /*Declaració de variables*/
         double maxim = NOMBRE_MINIM;
+        
+        /*Recorrem l'array per determinar el nombre màxim*/
         for (int i = 0; i < elementsReals.length; i++) {
             if (elementsReals[i] > maxim){
                 maxim = elementsReals[i];
             }
         }
+        
+        /*Retornem el màxim*/
         return maxim;
     }
     
@@ -91,6 +101,7 @@ public class ArrayReals implements Estadistiques {
      */
     @Override
     public double suma(){
+        /*Declaració de variables*/
         double suma = 0;
         for (int i = 0; i < elementsReals.length; i++) {
             suma = suma + elementsReals[i];
@@ -105,13 +116,15 @@ public class ArrayReals implements Estadistiques {
         String contingutElementsReals = "";
         for (int i = 0; i < elementsReals.length; i++) {
             if (i == (elementsReals.length - 1)){
-                /*Donem un format */
+                /*Donem un format de sortida al últim nombre*/
                 contingutElementsReals = contingutElementsReals + elementsReals[i];
             }
             else{
+                /*Canviem el fomat per quan no és l'últim nombre*/
                 contingutElementsReals = contingutElementsReals + elementsReals[i] + ",";
             }
         }
+        /*Mostrem per pantalla el contingut de l'array*/
         System.out.println(contingutElementsReals);
     }
 }
