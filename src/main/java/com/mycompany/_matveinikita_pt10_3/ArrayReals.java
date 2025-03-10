@@ -1,4 +1,4 @@
-package com.mycompany._matveinikitamartinezisel_pt10_3;
+package com.mycompany._matveinikita_pt10_3;
 
 import Interficies.Estadistiques;
 import java.util.Random;
@@ -105,6 +105,7 @@ public class ArrayReals implements Estadistiques {
         String contingutElementsReals = "";
         for (int i = 0; i < elementsReals.length; i++) {
             if (i == (elementsReals.length - 1)){
+                /*Donem un format */
                 contingutElementsReals = contingutElementsReals + elementsReals[i];
             }
             else{
